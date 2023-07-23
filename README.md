@@ -26,3 +26,7 @@ npm run rebuild
 ## Author
 
 Shunya Sasaki &lt;shunya.sasaki1120@gmail.com&gt;
+
+## LICENCE
+
+[MIT License](LICENSE)
