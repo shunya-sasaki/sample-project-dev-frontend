@@ -2,10 +2,10 @@ const path = require("path");
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, "src/index.js"),
+        app: path.resolve(__dirname, "src/index.tsx"),
     },
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
     output: {
         filename: "[name].bundle.js",
@@ -15,12 +15,12 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx|ts|tsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@babel/preset-env", "@babel/react"],
+                        presets: ["@babel/preset-env", "@babel/react", "@babel/preset-typescript"],
                     },
                 },
             },
